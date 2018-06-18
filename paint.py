@@ -107,7 +107,7 @@ class Paint(object):
         x = np.array(imToUse).astype('float32')
         x = x.reshape(1,1,28,28)
         pred = self.model.predict(x)
-        print('Prediction: ', pred)
+        print('Prediction: ', pred.argmax())
         return pred
     
 if __name__ == '__main__':
